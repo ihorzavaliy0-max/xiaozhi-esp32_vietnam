@@ -1680,7 +1680,10 @@ bool Esp32SdMusic::decodeAndPlayFile(const TrackInfo& track)
         }
 
         if (codec->output_sample_rate() != wav_sample_rate) {
-            ESP_LOGI(TAG, "Switch sample rate (WAV) → %d Hz", wav_sample_rate);
+            (int)):
+ESP_LOGI(TAG, "Switch sample rate (simple-dec) -> %d Hz", (int)info.sample_rate);
+
+
             codec->SetOutputSampleRate(wav_sample_rate);
         }
 
