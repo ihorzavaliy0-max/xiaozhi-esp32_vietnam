@@ -2011,7 +2011,7 @@ void LcdDisplay::create_canvas(int32_t status_bar_height) {
     }
 
     // int status_bar_height=lv_obj_get_height(status_bar_);
-    ESP_LOGI(TAG, "Status bar height: %d", status_bar_height);
+    ESP_LOGI(TAG, "Status bar height: %d", (int)status_bar_height);
     canvas_width_=width_;
     canvas_height_=height_-status_bar_height;
     ESP_LOGI(TAG, "Creating canvas with width: %d, height: %d", canvas_width_, canvas_height_);
