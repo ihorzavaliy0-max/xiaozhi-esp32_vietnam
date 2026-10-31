@@ -2376,7 +2376,7 @@ void LcdDisplay::DisplayQRCode(const uint8_t* qrcode, const char* text) {
     int th = lv_font_get_line_height(label_dsc.font);
     int32_t text_pos_y = canvas_height_ - 20;
     text_pos_y =  canvas_height_ - qr_pos_y + (qr_pos_y - th) / 2;
-    ESP_LOGI(TAG, "Canvas w: %d, h: %d, text y pos: %d", canvas_width_, canvas_height_, text_pos_y);
+    ESP_LOGI(TAG, "Canvas w: %d, h: %d, text y pos: %d", (int)canvas_width_, (int)canvas_height_, (int)text_pos_y);
     lv_area_t coords_text = {qr_pos_x, text_pos_y, canvas_width_ -1, canvas_height_ - 1};
     lv_draw_label(&layer, &label_dsc, &coords_text);
     
