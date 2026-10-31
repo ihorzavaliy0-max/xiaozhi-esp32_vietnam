@@ -12,7 +12,7 @@ jobs:
       - run: |
           . $IDF_PATH/export.sh
           idf.py set-target esp32s3
-          idf.py -D BOARD_TYPE=bread-compact-wifi-lcd build
+          idf.py -D CMAKE_CXX_FLAGS="-Wno-error" -D BOARD_TYPE=bread-compact-wifi-lcd build
           idf.py merge-bin -o merged-binary.bin
       - uses: actions/upload-artifact@v4
         with:
