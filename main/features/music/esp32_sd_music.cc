@@ -1951,7 +1951,7 @@ ESP_LOGI(TAG, "Switch sample rate (simple-dec) -> %d Hz", (int)info.sample_rate)
                              info.channel);
 
                     if (codec->output_sample_rate() != info.sample_rate) {
-                        ESP_LOGI(TAG, "Switch sample rate (simple-dec) → %d Hz", info.sample_rate);
+                        ESP_LOGI(TAG, "Switch sample rate (simple-dec) -> %d Hz", (int)info.sample_rate);
                         codec->SetOutputSampleRate(info.sample_rate);
                     }
                 }
